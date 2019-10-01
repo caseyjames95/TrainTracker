@@ -14,6 +14,23 @@
 </head>
 
 <body>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAyc2T0-w22W-JxkTOi3S88K0g3oF7-DH4",
+            authDomain: "traintracker-e26a8.firebaseapp.com",
+            databaseURL: "https://traintracker-e26a8.firebaseio.com",
+            projectId: "traintracker-e26a8",
+            storageBucket: "traintracker-e26a8.appspot.com",
+            messagingSenderId: "147059723886",
+            appId: "1:147059723886:web:d9efb82bd00db6b448607f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Bootstrap Start Container -->
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -36,12 +53,7 @@
                         </div>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>3oooo</td>
+                        <tr id="trainRow">
                         </tr>
                     </tbody>
                 </table>
@@ -68,7 +80,7 @@
                         placeholder="Frequency (Minutes)">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <button id="tSubmit" class="submit input">Submit</button>
+                            <button id="tSubmit" class="submit input" href="">Submit</button>
                         </div>
                     </div>
 
@@ -77,7 +89,8 @@
         </div>
     </div>
 
-
+    <!-- JavaScript -->
+    <script src="./assets/javascript/app.js"></script>
     <!-- Bootstrap CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
